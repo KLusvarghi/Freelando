@@ -7,6 +7,7 @@ import { Header } from './components/Header/Header';
 import { ProvedorTema } from './components/ProvedorTema/ProvedorTema';
 import { Link } from './components/Link/Link';
 import { Tipografia } from './components/Tipografia/Tipografia';
+import { CampoTexto } from './components/CampoTexto/CampoTexto';
 
 function App() {
   return (
@@ -26,8 +27,15 @@ function App() {
       </Header>
       <Card>
         {/* Assim dizendo que o componente renderizado seja um h1, mas a variante (ou o estilo dele) seja de um h3 */}
-        <Tipografia variante="h3" componente="h1">Crie seu cadastro</Tipografia>
-        <Tipografia variante="body" componente="body">Crie seu perfil gratuitamente para começar a trabalhar com os melhores freelancers. Em seguida, você poderá dar mais detalhes sobre suas demandas e sobre sua forma de trabalho. </Tipografia>
+        <Tipografia variante="h3" componente="h1">
+          Crie seu cadastro
+        </Tipografia>
+        <Tipografia variante="body" componente="body">
+          Crie seu perfil gratuitamente para começar a trabalhar com os melhores
+          freelancers. Em seguida, você poderá dar mais detalhes sobre suas
+          demandas e sobre sua forma de trabalho.{' '}
+        </Tipografia>
+        <CampoTexto titulo="Nome Completo"/>
       </Card>
     </ProvedorTema>
   );
