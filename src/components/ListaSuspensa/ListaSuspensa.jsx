@@ -2,6 +2,8 @@ import styled from '@emotion/styled/macro';
 import React, { useState } from 'react';
 import { ItemListaSuspensaEstilizado } from './ItemListaSuspensaEstilizado';
 import { ListaSuspensaEstilizada } from './ListaSuspensaEstilizada';
+import { Less } from '../Icones/Less';
+import { Expand } from '../Icones/Expand';
 
 const LabelEstilizada = styled.label`
   display: block;
@@ -80,13 +82,7 @@ export const ListaSuspensa = ({ titulo, opcoes }) => {
         onKeyDown={(e) => manipularTeclaTeclado(e)}
       >
         <div>{opcaoSelecionada ? opcaoSelecionada.text : 'Selecione'}</div>
-        <span>
-          {isOpen ? (
-            <img src="./icons/less.svg" alt="icones para expandir" />
-          ) : (
-            <img src="./icons/expand.svg" alt="icones para expandir" />
-          )}
-        </span>
+        <span>{isOpen ? <Less /> : <Expand />}</span>
       </BotaolEstilizada>
       {isOpen && (
         <ListaSuspensaEstilizada>

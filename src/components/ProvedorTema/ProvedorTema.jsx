@@ -39,5 +39,5 @@ const tema = {
 };
 
 export const ProvedorTema = ({ children }) => {
-  return <ThemeProvider theme={tema}>{children}</ThemeProvider>;
+  return <ThemeProvider className="rtest" theme={tema}>{children}</ThemeProvider>;
 };
